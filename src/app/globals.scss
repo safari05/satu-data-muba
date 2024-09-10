@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~video-react/styles/scss/video-react";
+@import "~photoswipe/dist/photoswipe.css";
+@import "~@changey/react-leaflet-markercluster/dist/styles.min.css";
+@import "~leaflet/dist/leaflet.css";
+
+:root {
+  --swiper-theme-color: #000;
+  --swiper-navigation-color: white;
+}
+
+body {
+  margin: 0;
+}
+
+.leaflet-container {
+  height: 80vh;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev {
+  --swiper-navigation-size: 5;
+  margin-top: -30px;
+  border-radius: 100%;
+  border: 3px solid #052325;
+  width: 25px;
+  height: 25px;
+  background-color: #052325;
+  margin-left: -10px;
+}
+
+.swiper-button-next {
+  --swiper-navigation-size: 5;
+  margin-top: -30px;
+  border-radius: 100%;
+  border: 3px solid #052325;
+  width: 25px;
+  height: 25px;
+  background-color: #052325;
+  margin-right: -10px;
+}
+
+.video-react-controls-enabled {
+  border-radius: 6px !important;
+}
+.video-react {
+  background-color: #fff !important;
+}

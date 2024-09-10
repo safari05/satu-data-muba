@@ -1,0 +1,509 @@
+{
+  "DataCount": {
+    "Dataset": 1403,
+    "Visitor": 3943230,
+    "DatasetPriority": 301
+  },
+  "BannerHero": {
+    "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/setelah-kemarin-melakukan-kunjungan-dalam-rangka-visitors-ground-check-penilaian-desa-cinta-statistik-di-desa-bukit-selabu-kecamatan-batanghari-leko.jpg",
+    "Description": "Mengenal G20 dan Indonesia menjabat Presidensi G20 tahun 2022",
+    "Type": 1
+  },
+  "BannerFooter": {
+    "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/setelah-kemarin-melakukan-kunjungan-dalam-rangka-visitors-ground-check-penilaian-desa-cinta-statistik-di-desa-bukit-selabu-kecamatan-batanghari-leko.jpg",
+    "Description": "Mengenal G20 dan Indonesia menjabat Presidensi G20 tahun 2022",
+    "Type": 1
+  },
+  "TabData": {
+    "DatasetNews": [
+      {
+        "DatasetSlug": "indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022",
+        "DatasetCategory": "Lingkungan Hidup",
+        "DatasetCategorySlug": "lingkungan-hidup",
+        "DatasetTitle": "Indeks Kualitas Air di Kabupaten Musi Banyuasin",
+        "DatasetDescription": "Perhitungan indeks untuk indikator kualitas air sungai dilakukan\r\nberdasarkan Keputusan Menteri Negara Lingkungan Hidup Nomor 115\r\nTahun 2003 tentang Pedoman Penentuan Status Mutu Air. Dalam pedoman\r\ntersebut dijelaskan antara lain mengenai penentuan status mutu air dengan\r\nmetoda indeks pencemaran (Pollution Index – PI).",
+        "DataHeaderName": "Indeks Kualitas Air di Kabupaten Musi Banyuasin Tahun 2022",
+        "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10118/indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022.xlsx",
+        "DataHeaderId": "b8c34f3b-db59-48d0-8a43-e9d97e98bffb",
+        "DataHeaderSlug": "indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022",
+        "DataHeaderLastUpdate": "Jun 15, 2023",
+        "Tags": [
+          {
+            "Name": "ika",
+            "Slug": "ika"
+          },
+          {
+            "Name": "indeks kualitas air",
+            "Slug": "indeks-kualitas-air"
+          }
+        ]
+      },
+      {
+        "DatasetSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+        "DatasetCategory": "Ekonomi dan Keuangan",
+        "DatasetCategorySlug": "ekonomi-dan-keuangan",
+        "DatasetTitle": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal)",
+        "DatasetDescription": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin ",
+        "DataHeaderName": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal) Tahun 2022",
+        "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10129/produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022.xlsx",
+        "DataHeaderId": "da706e6b-8e1c-4955-be66-83255e7922d2",
+        "DataHeaderSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+        "DataHeaderLastUpdate": "Apr 03, 2023",
+        "Tags": [
+          {
+            "Name": "produksi",
+            "Slug": "produksi"
+          },
+          {
+            "Name": "tanaman",
+            "Slug": "tanaman"
+          },
+          {
+            "Name": "sayur",
+            "Slug": "sayur"
+          }
+        ]
+      },
+      {
+        "DatasetSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+        "DatasetCategory": "Ekonomi dan Keuangan",
+        "DatasetCategorySlug": "ekonomi-dan-keuangan",
+        "DatasetTitle": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal)",
+        "DatasetDescription": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin ",
+        "DataHeaderName": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal) Tahun 2022",
+        "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10129/produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022.xlsx",
+        "DataHeaderId": "da706e6b-8e1c-4955-be66-83255e7922d2",
+        "DataHeaderSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+        "DataHeaderLastUpdate": "Apr 03, 2023",
+        "Tags": [
+          {
+            "Name": "produksi",
+            "Slug": "produksi"
+          },
+          {
+            "Name": "tanaman",
+            "Slug": "tanaman"
+          },
+          {
+            "Name": "sayur",
+            "Slug": "sayur"
+          }
+        ]
+      }
+    ],
+    "DatasetPriority": [
+      {
+        "DatasetSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+        "DatasetCategory": "Ekonomi dan Keuangan",
+        "DatasetCategorySlug": "ekonomi-dan-keuangan",
+        "DatasetTitle": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal)",
+        "DatasetDescription": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin ",
+        "DataHeaderName": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal) Tahun 2022",
+        "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10129/produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022.xlsx",
+        "DataHeaderId": "da706e6b-8e1c-4955-be66-83255e7922d2",
+        "DataHeaderSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+        "DataHeaderLastUpdate": "Apr 03, 2023",
+        "Tags": [
+          {
+            "Name": "produksi",
+            "Slug": "produksi"
+          },
+          {
+            "Name": "tanaman",
+            "Slug": "tanaman"
+          },
+          {
+            "Name": "sayur",
+            "Slug": "sayur"
+          }
+        ]
+      }
+    ],
+    "News": [
+      {
+        "Type": 1,
+        "Header": "SATU DATA MUBA",
+        "Title": "Dinkominfo Muba Gandeng PT.Micepro Indonesia Terbitkan E-Book  : Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023",
+        "Description": "Untuk menjalin sinergi dan kolaborasi semua pemangku kepentingan Dinas Kominfo Muba menggandeng dan bekerja sama melakukan MoU dengan PT. Micepro Indonesia  dalam menerbitkan buku dan E-book dengan judul Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023. Langkah ini diambil Selasa (07/03/2023 di Jakarta, untuk percepatan sukses pelaksanaan program CSR di daerah",
+        "LastUpdate": "Apr 03, 2023"
+      }
+    ]
+  },
+  "OpdBrand": {
+    "Most": [
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10101/dinas-pendidikan-dan-kebudayaan.png",
+        "NamaOpd": "Dinas Kesehatan",
+        "Slug": "/dinas-kesehatan",
+        "Datasets": [
+          {
+            "DatasetSlug": "indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022",
+            "DatasetCategory": "Lingkungan Hidup",
+            "DatasetCategorySlug": "lingkungan-hidup",
+            "DatasetTitle": "Indeks Kualitas Air di Kabupaten Musi Banyuasin",
+            "DatasetDescription": "Perhitungan indeks untuk indikator kualitas air sungai dilakukan\r\nberdasarkan Keputusan Menteri Negara Lingkungan Hidup Nomor 115\r\nTahun 2003 tentang Pedoman Penentuan Status Mutu Air. Dalam pedoman\r\ntersebut dijelaskan antara lain mengenai penentuan status mutu air dengan\r\nmetoda indeks pencemaran (Pollution Index – PI).",
+            "DataHeaderName": "Indeks Kualitas Air di Kabupaten Musi Banyuasin Tahun 2022",
+            "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10118/indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022.xlsx",
+            "DataHeaderId": "b8c34f3b-db59-48d0-8a43-e9d97e98bffb",
+            "DataHeaderSlug": "indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022",
+            "DataHeaderLastUpdate": "Jun 15, 2023",
+            "Tags": [
+              {
+                "Name": "ika",
+                "Slug": "ika"
+              },
+              {
+                "Name": "indeks kualitas air",
+                "Slug": "indeks-kualitas-air"
+              }
+            ]
+          },
+          {
+            "DatasetSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DatasetCategory": "Ekonomi dan Keuangan",
+            "DatasetCategorySlug": "ekonomi-dan-keuangan",
+            "DatasetTitle": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal)",
+            "DatasetDescription": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin ",
+            "DataHeaderName": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal) Tahun 2022",
+            "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10129/produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022.xlsx",
+            "DataHeaderId": "da706e6b-8e1c-4955-be66-83255e7922d2",
+            "DataHeaderSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DataHeaderLastUpdate": "Apr 03, 2023",
+            "Tags": [
+              {
+                "Name": "produksi",
+                "Slug": "produksi"
+              },
+              {
+                "Name": "tanaman",
+                "Slug": "tanaman"
+              },
+              {
+                "Name": "sayur",
+                "Slug": "sayur"
+              }
+            ]
+          },
+          {
+            "DatasetSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DatasetCategory": "Ekonomi dan Keuangan",
+            "DatasetCategorySlug": "ekonomi-dan-keuangan",
+            "DatasetTitle": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal)",
+            "DatasetDescription": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin ",
+            "DataHeaderName": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal) Tahun 2022",
+            "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10129/produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022.xlsx",
+            "DataHeaderId": "da706e6b-8e1c-4955-be66-83255e7922d2",
+            "DataHeaderSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DataHeaderLastUpdate": "Apr 03, 2023",
+            "Tags": [
+              {
+                "Name": "produksi",
+                "Slug": "produksi"
+              },
+              {
+                "Name": "tanaman",
+                "Slug": "tanaman"
+              },
+              {
+                "Name": "sayur",
+                "Slug": "sayur"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10104/dishub.png",
+        "NamaOpd": "Dinas Perhubungan",
+        "Slug": "/dinas-perhubungan",
+        "Datasets": [
+          {
+            "DatasetSlug": "string",
+            "DatasetCategory": "string",
+            "DatasetCategorySlug": "string",
+            "DatasetTitle": "string",
+            "DatasetDescription": "string",
+            "DataHeaderName": "string",
+            "DataHeaderUrlData": "string",
+            "DataHeaderId": "string",
+            "DataHeaderSlug": "string",
+            "DataHeaderLastUpdate": "string",
+            "Tags": [
+              {
+                "Name": "string",
+                "Slug": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10105/badan-penanggulangan-bencana-daerah.png",
+        "NamaOpd": "Badan Penanggulan Bencana Daerah",
+        "Slug": "/dinas-perhubungan",
+        "Datasets": [
+          {
+            "DatasetSlug": "string",
+            "DatasetCategory": "string",
+            "DatasetCategorySlug": "string",
+            "DatasetTitle": "string",
+            "DatasetDescription": "string",
+            "DataHeaderName": "string",
+            "DataHeaderUrlData": "string",
+            "DataHeaderId": "string",
+            "DataHeaderSlug": "string",
+            "DataHeaderLastUpdate": "string",
+            "Tags": [
+              {
+                "Name": "string",
+                "Slug": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10126/dinas-perkebunan.png",
+        "NamaOpd": "Dinas Perkebunan",
+        "Slug": "/dinas-kominfo",
+        "Datasets": [
+          {
+            "DatasetSlug": "string",
+            "DatasetCategory": "string",
+            "DatasetCategorySlug": "string",
+            "DatasetTitle": "string",
+            "DatasetDescription": "string",
+            "DataHeaderName": "string",
+            "DataHeaderUrlData": "string",
+            "DataHeaderId": "string",
+            "DataHeaderSlug": "string",
+            "DataHeaderLastUpdate": "string",
+            "Tags": [
+              {
+                "Name": "string",
+                "Slug": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Best": [
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10118/dinas-lingkungan-hidup.png",
+        "NamaOpd": "Dinas Lingkungan Hidup",
+        "Slug": "/dinas-kesehatan",
+        "Datasets": [
+          {
+            "DatasetSlug": "indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022",
+            "DatasetCategory": "Lingkungan Hidup",
+            "DatasetCategorySlug": "lingkungan-hidup",
+            "DatasetTitle": "Indeks Kualitas Air di Kabupaten Musi Banyuasin",
+            "DatasetDescription": "Perhitungan indeks untuk indikator kualitas air sungai dilakukan\r\nberdasarkan Keputusan Menteri Negara Lingkungan Hidup Nomor 115\r\nTahun 2003 tentang Pedoman Penentuan Status Mutu Air. Dalam pedoman\r\ntersebut dijelaskan antara lain mengenai penentuan status mutu air dengan\r\nmetoda indeks pencemaran (Pollution Index – PI).",
+            "DataHeaderName": "Indeks Kualitas Air di Kabupaten Musi Banyuasin Tahun 2022",
+            "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10118/indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022.xlsx",
+            "DataHeaderId": "b8c34f3b-db59-48d0-8a43-e9d97e98bffb",
+            "DataHeaderSlug": "indeks-kualitas-air-di-kabupaten-musi-banyuasin-tahun-2022",
+            "DataHeaderLastUpdate": "Jun 15, 2023",
+            "Tags": [
+              {
+                "Name": "ika",
+                "Slug": "ika"
+              },
+              {
+                "Name": "indeks kualitas air",
+                "Slug": "indeks-kualitas-air"
+              }
+            ]
+          },
+          {
+            "DatasetSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DatasetCategory": "Ekonomi dan Keuangan",
+            "DatasetCategorySlug": "ekonomi-dan-keuangan",
+            "DatasetTitle": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal)",
+            "DatasetDescription": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin ",
+            "DataHeaderName": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal) Tahun 2022",
+            "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10129/produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022.xlsx",
+            "DataHeaderId": "da706e6b-8e1c-4955-be66-83255e7922d2",
+            "DataHeaderSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DataHeaderLastUpdate": "Apr 03, 2023",
+            "Tags": [
+              {
+                "Name": "produksi",
+                "Slug": "produksi"
+              },
+              {
+                "Name": "tanaman",
+                "Slug": "tanaman"
+              },
+              {
+                "Name": "sayur",
+                "Slug": "sayur"
+              }
+            ]
+          },
+          {
+            "DatasetSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DatasetCategory": "Ekonomi dan Keuangan",
+            "DatasetCategorySlug": "ekonomi-dan-keuangan",
+            "DatasetTitle": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal)",
+            "DatasetDescription": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin ",
+            "DataHeaderName": "Produksi Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Musi Banyuasin (Kwintal) Tahun 2022",
+            "DataHeaderUrlData": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10129/produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022.xlsx",
+            "DataHeaderId": "da706e6b-8e1c-4955-be66-83255e7922d2",
+            "DataHeaderSlug": "produksi-tanaman-sayuran-menurut-kecamatan-dan-jenis-tanaman-di-kabupaten-musi-banyuasin-kwintal-tahun-2022",
+            "DataHeaderLastUpdate": "Apr 03, 2023",
+            "Tags": [
+              {
+                "Name": "produksi",
+                "Slug": "produksi"
+              },
+              {
+                "Name": "tanaman",
+                "Slug": "tanaman"
+              },
+              {
+                "Name": "sayur",
+                "Slug": "sayur"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10120/dinas-pemberdayaan-perempuan-dan-perlindungan-anak.png",
+        "NamaOpd": "DINAS PEMBERDAYAAN PEREMPUAN DAN PERLINDUNGAN ANAK",
+        "Slug": "/dinas-kominfo",
+        "Datasets": [
+          {
+            "DatasetSlug": "string",
+            "DatasetCategory": "string",
+            "DatasetCategorySlug": "string",
+            "DatasetTitle": "string",
+            "DatasetDescription": "string",
+            "DataHeaderName": "string",
+            "DataHeaderUrlData": "string",
+            "DataHeaderId": "string",
+            "DataHeaderSlug": "string",
+            "DataHeaderLastUpdate": "string",
+            "Tags": [
+              {
+                "Name": "string",
+                "Slug": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10126/dinas-perkebunan.png",
+        "NamaOpd": "Dinas Perkebunan",
+        "Slug": "/dinas-kominfo",
+        "Datasets": [
+          {
+            "DatasetSlug": "string",
+            "DatasetCategory": "string",
+            "DatasetCategorySlug": "string",
+            "DatasetTitle": "string",
+            "DatasetDescription": "string",
+            "DataHeaderName": "string",
+            "DataHeaderUrlData": "string",
+            "DataHeaderId": "string",
+            "DataHeaderSlug": "string",
+            "DataHeaderLastUpdate": "string",
+            "Tags": [
+              {
+                "Name": "string",
+                "Slug": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "UrlFile": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/opd_10135/satuan-polisi-pamong-praja.png",
+        "NamaOpd": "SATUAN POLISI PAMONG PRAJA",
+        "Slug": "/dinas-kominfo",
+        "Datasets": [
+          {
+            "DatasetSlug": "string",
+            "DatasetCategory": "string",
+            "DatasetCategorySlug": "string",
+            "DatasetTitle": "string",
+            "DatasetDescription": "string",
+            "DataHeaderName": "string",
+            "DataHeaderUrlData": "string",
+            "DataHeaderId": "string",
+            "DataHeaderSlug": "string",
+            "DataHeaderLastUpdate": "string",
+            "Tags": [
+              {
+                "Name": "string",
+                "Slug": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "News": [
+    {
+      "Type": 2,
+      "Header": "SATU DATA MUBA",
+      "Title": "Dinkominfo Muba Gandeng PT.Micepro Indonesia Terbitkan E-Book  : Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023",
+      "Description": "Untuk menjalin sinergi dan kolaborasi semua pemangku kepentingan Dinas Kominfo Muba menggandeng dan bekerja sama melakukan MoU dengan PT. Micepro Indonesia  dalam menerbitkan buku dan E-book dengan judul Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023. Langkah ini diambil Selasa (07/03/2023 di Jakarta, untuk percepatan sukses pelaksanaan program CSR di daerah",
+      "LastUpdate": "Apr 03, 2023",
+      "FileName": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/desa-bukit-selabu-kecamatan-batanghari-leko-kabupaten-musi-banyuasin-muba-mendapatkan-apresiasi-langsung-dari-pj-bupati-muba-h-apriyadi.mp4"
+    },
+    {
+      "Type": 1,
+      "Header": "SATU DATA MUBA",
+      "Title": "Dinkominfo Muba Gandeng PT.Micepro Indonesia Terbitkan E-Book  : Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023",
+      "Description": "Untuk menjalin sinergi dan kolaborasi semua pemangku kepentingan Dinas Kominfo Muba menggandeng dan bekerja sama melakukan MoU dengan PT. Micepro Indonesia  dalam menerbitkan buku dan E-book dengan judul Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023. Langkah ini diambil Selasa (07/03/2023 di Jakarta, untuk percepatan sukses pelaksanaan program CSR di daerah",
+      "LastUpdate": "Apr 03, 2023",
+      "FileName": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/forum-grup-diskusi-publikasi-muba-dalam-angka-2023.jpg"
+    },
+    {
+      "Type": 1,
+      "Header": "DESA CANTIK",
+      "Title": "Kepala Dinas Komunikasi dan Informatika Herryandi Sinulingga AP, Mewakili Pj Bupati Musi Banyuasin Bapak H Apriyadi Menerima Penghargaan Desa Cantik 2022",
+      "Description": "Kepala Dinas Komunikasi dan Informatika Herryandi Sinulingga AP, Mewakili Pj Bupati Musi Banyuasin Bapak H Apriyadi Menerima Penghargaan Desa Cantik 2022 Dari Kemenpan RB Anwar Anas dan Kepala BPS RI Untuk Desa Bukit Selabu Kecamatan Batang Hari Leko “MUBA BANGGA”. (Senin 31 Januari 2023)",
+      "LastUpdate": "Apr 03, 2023",
+      "FileName": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/kepala-dinas-komunikasi-dan-informatika-herryandi-sinulingga-ap-mewakili-pj-bupati-musi-banyuasin-bapak-h-apriyadi-menerima-penghargaan-desa-cantik-2022.jpg"
+    },
+    {
+      "Type": 1,
+      "Header": "DESA CANTIK",
+      "Title": "Kepala Dinas Komunikasi dan Informatika Herryandi Sinulingga AP, Mewakili Pj Bupati Musi Banyuasin Bapak H Apriyadi Menerima Penghargaan Desa Cantik 2022",
+      "Description": "Kepala Dinas Komunikasi dan Informatika Herryandi Sinulingga AP, Mewakili Pj Bupati Musi Banyuasin Bapak H Apriyadi Menerima Penghargaan Desa Cantik 2022 Dari Kemenpan RB Anwar Anas dan Kepala BPS RI Untuk Desa Bukit Selabu Kecamatan Batang Hari Leko “MUBA BANGGA”. (Senin 31 Januari 2023)",
+      "LastUpdate": "Apr 03, 2023",
+      "FileName": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/kepala-dinas-komunikasi-dan-informatika-herryandi-sinulingga-ap-mewakili-pj-bupati-musi-banyuasin-bapak-h-apriyadi-menerima-penghargaan-desa-cantik-2022.jpg"
+    },
+    {
+      "Type": 2,
+      "Header": "SATU DATA MUBA",
+      "Title": "Dinkominfo Muba Gandeng PT.Micepro Indonesia Terbitkan E-Book  : Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023",
+      "Description": "Untuk menjalin sinergi dan kolaborasi semua pemangku kepentingan Dinas Kominfo Muba menggandeng dan bekerja sama melakukan MoU dengan PT. Micepro Indonesia  dalam menerbitkan buku dan E-book dengan judul Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023. Langkah ini diambil Selasa (07/03/2023 di Jakarta, untuk percepatan sukses pelaksanaan program CSR di daerah",
+      "LastUpdate": "Apr 03, 2023",
+      "FileName": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/desa-bukit-selabu-kecamatan-batanghari-leko-kabupaten-musi-banyuasin-muba-mendapatkan-apresiasi-langsung-dari-pj-bupati-muba-h-apriyadi.mp4"
+    },
+    {
+      "Type": 1,
+      "Header": "SATU DATA MUBA",
+      "Title": "Dinkominfo Muba Gandeng PT.Micepro Indonesia Terbitkan E-Book  : Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023",
+      "Description": "Untuk menjalin sinergi dan kolaborasi semua pemangku kepentingan Dinas Kominfo Muba menggandeng dan bekerja sama melakukan MoU dengan PT. Micepro Indonesia  dalam menerbitkan buku dan E-book dengan judul Muba Review Capaian Kinerja Pemerintah Kabupaten Musi Banyuasin 2023. Langkah ini diambil Selasa (07/03/2023 di Jakarta, untuk percepatan sukses pelaksanaan program CSR di daerah",
+      "LastUpdate": "Apr 03, 2023",
+      "FileName": "https://satudata.mubakab.go.id/api/Assets/Files/Appl/File/News/forum-grup-diskusi-publikasi-muba-dalam-angka-2023.jpg"
+    }
+  ],
+  "Categories": [
+    {
+      "Name": "string",
+      "Slug": "string",
+      "Description": "string",
+      "FileLogo": "string",
+      "DatasetCount": 0
+    }
+  ]
+}
