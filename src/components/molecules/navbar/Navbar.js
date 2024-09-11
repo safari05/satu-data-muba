@@ -45,6 +45,11 @@ export const Navbar = ({ type }) => {
         name={"STATISTIK SEKTORAL"}
         color={color[type]}
       />
+      <NavItem
+        link={"statistik-summary"}
+        name={"STATISTIK SUMMARY"}
+        color={color[type]}
+      />
 
       <div
         className="group cursor-pointer"

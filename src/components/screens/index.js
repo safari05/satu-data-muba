@@ -7,6 +7,7 @@ import CategoryScreen from "./category";
 import DetailCategoryScreen from "./detailCategory";
 import InfoGraphicScreen from "./infoGraphic";
 import StatisticSectoralScreen from "./statisticSectoral";
+import StatisticSummaryScreen from "./statisticSummary";
 import SuggestionCriticsmScreen from "./suggestionCriticsm";
 import PublicationScreen from "./publication";
 import NewsScreen from "./news";
@@ -30,6 +31,7 @@ export {
   DetailCategoryScreen,
   InfoGraphicScreen,
   StatisticSectoralScreen,
+  StatisticSummaryScreen,
   SuggestionCriticsmScreen,
   PublicationScreen,
   NewsScreen,
