@@ -29,7 +29,7 @@ export const ContentDesaCantik = () => {
         </h3>
       </div>
       <div className="mb-10">
-        <h1 className="text-black font-bold text-xl">Data Kuisioner</h1>
+        <h1 className="text-yellow-400 font-bold text-xl">Data Kuisioner</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="mt-4">
           <Swiper
@@ -73,8 +73,8 @@ export const ContentDesaCantik = () => {
                   className={`${backgroundColor} h-[200px] text-black rounded-xl`}
                 >
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
-                    <p>{survey.Nama}</p>
-                    <p>{survey.Count}</p>
+                  <p className="text-lg font-semibold">{survey.NamaPendek}</p>
+                  <p className="text-md">{survey.Count}</p>
                     <button className="bg-indigo-400 text-lg px-6 py-1 rounded-xl text-white">
                       Detail
                     </button>
@@ -87,7 +87,7 @@ export const ContentDesaCantik = () => {
       </div>
 
       <div>
-        <h1 className="text-black font-bold text-xl">Data Survey</h1>
+        <h1 className="text-white font-bold text-xl">Data Survey</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="mt-4">
           <Swiper
@@ -131,7 +131,7 @@ export const ContentDesaCantik = () => {
                   className={`${backgroundColor}  text-black rounded-xl`}
                 >
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
-                  <p className="text-lg font-semibold">{survey.Nama}</p>
+                  <p className="text-lg font-semibold">{survey.NamaPendek}</p>
                   <p className="text-md">{survey.Count}</p>
                     <button className="bg-indigo-400 text-lg px-6 py-1 rounded-xl text-white">
                       Detail
