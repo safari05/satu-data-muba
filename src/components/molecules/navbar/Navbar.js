@@ -46,8 +46,8 @@ export const Navbar = ({ type }) => {
         color={color[type]}
       />
       <NavItem
-        link={"statistik-summary"}
-        name={"STATISTIK SUMMARY"}
+        link={"desa-cantik"}
+        name={"DESA CANTIK"}
         color={color[type]}
       />
 

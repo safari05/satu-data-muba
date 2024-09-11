@@ -7,7 +7,6 @@ import CategoryScreen from "./category";
 import DetailCategoryScreen from "./detailCategory";
 import InfoGraphicScreen from "./infoGraphic";
 import StatisticSectoralScreen from "./statisticSectoral";
-import StatisticSummaryScreen from "./statisticSummary";
 import SuggestionCriticsmScreen from "./suggestionCriticsm";
 import PublicationScreen from "./publication";
 import NewsScreen from "./news";
@@ -20,6 +19,7 @@ import DatasetFormatScreen from "./datasetFormat";
 import DetailDatasetFormatScreen from "./detailDatasetFormat";
 import DetailDatasetPrivateScreen from "./detailDatasetPrivate";
 import DetailDatasetPreviewPrivateScreen from "./detailDatasetPreviewPrivate";
+import DesaCantikScreen from "./desaCantik";
 
 export {
   HomeScreen,
@@ -31,7 +31,6 @@ export {
   DetailCategoryScreen,
   InfoGraphicScreen,
   StatisticSectoralScreen,
-  StatisticSummaryScreen,
   SuggestionCriticsmScreen,
   PublicationScreen,
   NewsScreen,
@@ -44,4 +43,5 @@ export {
   DetailDatasetFormatScreen,
   DetailDatasetPrivateScreen,
   DetailDatasetPreviewPrivateScreen,
+  DesaCantikScreen,
 };
