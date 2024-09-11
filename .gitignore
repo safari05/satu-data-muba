@@ -232,3 +232,4 @@ src/*/[Ll]ogs/*
 *.vscode
 *-lock.json
 *yarn.lock
+.next
