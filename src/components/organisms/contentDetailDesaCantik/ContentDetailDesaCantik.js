@@ -83,14 +83,14 @@ export const ContentDetailDesaCantik = ({ data }) => {
         <RSelect value={selectedYearOption} options={optionYears}  styles={customStyles} className="ml-5"   />
       </div>
 
-      <div className="flex flex-wrap">
-        <div className="w-full self-center mb-20 lg:w-1/2">
-          <VulnChart/>
-        </div>
-        <div className="w-full self-center mb-20 lg:w-1/2">
-          <VulnChart/>
-        </div>
+      <div className="flex flex-wrap mx-4 lg:mx-6">
+      <div className="w-full lg:w-1/2 px-2 lg:px-4 mb-4 lg:mb-0">
+        <VulnChart />
       </div>
+      <div className="w-full lg:w-1/2 px-2 lg:px-4 mb-4 lg:mb-0">
+        <VulnChart />
+      </div>
+    </div>
     </Container>
   );
 };
