@@ -3,12 +3,43 @@ import React from "react";
 import { Container } from "@/components/atoms";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css"; // Import Swiper styles
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper";
+import Link from "next/link";
 
 // Install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-export const ContentDesaCantik = () => {
+const CustomPagination = ({ swiper }) => {
+  if (!swiper) return null;
+
+  const slidesPerView = swiper.params.slidesPerView;
+  const totalSlides = swiper.slides.length;
+  const pages = Math.ceil(totalSlides / slidesPerView);
+  console.log(`Total slides ${totalSlides}`);
+  return (
+    <div className="custom-pagination">
+      {[...Array(pages)].map((_, index) => (
+        <button
+          key={index}
+          className={`pagination-bullet ${swiper.activeIndex === index ? 'active' : ''}`}
+          onClick={() => swiper.slideTo(index * slidesPerView)}
+        />
+      ))}
+    </div>
+  );
+};
+
+export const ContentDesaCantik = (dataDesaCantik) => {
+
+  if (!dataDesaCantik || !dataDesaCantik.dataDesaCantik) {
+    return <div>Loading...</div>;
+  }
   return (
     <Container>
       <div
@@ -28,78 +59,95 @@ export const ContentDesaCantik = () => {
           </span>
         </h3>
       </div>
+
       <div className="mb-10">
-        <h1 className="text-yellow-400 font-bold text-xl">Data Kuisioner</h1>
+        <h1 className="text-yellow-400 font-bold text-xl">
+          {dataDesaCantik.dataDesaCantik.Data.Kuisioner.Judul}
+        </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="mt-4">
           <Swiper
-             modules={[Autoplay]}
-            spaceBetween={10}
-            slidesPerView={4}
-            pagination={{ clickable: true }}
-            navigation
-            loop
-            autoplay={{
-              delay: 3000, 
-              disableOnInteraction: false, 
-            }}
-            breakpoints={{
-              640: {
-                slidesPerView: 1, // 1 slide per view on small screens
-              },
-              768: {
-                slidesPerView: 2, // 2 slides per view on medium screens
-              },
-              1024: {
-                slidesPerView: 4, // 4 slides per view on large screens
-              },
+             modules={[Autoplay, Pagination, Navigation]}
+             spaceBetween={10}
+             slidesPerView={4}
+             pagination={{ clickable: true }}
+             navigation
+             loop
+             autoplay={{
+               delay: 3000,
+               disableOnInteraction: false,
+             }}
+             breakpoints={{
+               640: {
+                 slidesPerView: 1, // 1 slide per view on small screens
+               },
+               768: {
+                 slidesPerView: 2, // 2 slides per view on medium screens
+               },
+               1024: {
+                 slidesPerView: 4, // 4 slides per view on large screens
+               },
+             }}
+             onInit={(swiper) => {
+              // Attach custom pagination
+              swiper.params.customPagination = <CustomPagination swiper={swiper} />;
             }}
           >
-            {data.Data.ChartKuisioners.map((survey, index) => {
-              const backgroundColors = [
-                "bg-blue-100",
-                "bg-green-100",
-                "bg-yellow-100",
-                "bg-red-100",
-                "bg-purple-100",
-              ];
+            {dataDesaCantik.dataDesaCantik.Data.Kuisioner.Items.map(
+              (kuisioner, index) => {
+                const backgroundColors = [
+                  "bg-blue-100",
+                  "bg-green-100",
+                  "bg-yellow-100",
+                  "bg-red-100",
+                  "bg-purple-100",
+                ];
 
-              const backgroundColor =
-                backgroundColors[index % backgroundColors.length];
+                const backgroundColor =
+                  backgroundColors[index % backgroundColors.length];
 
-              return (
-                <SwiperSlide
-                  key={index}
-                  className={`${backgroundColor} h-[200px] text-black rounded-xl`}
-                >
-                  <div className="flex flex-col justify-center items-center gap-4 p-4">
-                  <p className="text-lg font-semibold">{survey.NamaPendek}</p>
-                  <p className="text-md">{survey.Count}</p>
-                    <button className="bg-indigo-400 text-lg px-6 py-1 rounded-xl text-white">
-                      Detail
-                    </button>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
+                return (
+                  <SwiperSlide
+                    key={index}
+                    className={`${backgroundColor} h-[200px] text-black rounded-xl `}
+                  >
+                    <div className="flex flex-col gap-4 p-4 ">
+                      <p className="text-lg font-semibold text-center">
+                        {kuisioner.Nama} <span> {kuisioner.Tahun}</span>
+                      </p>
+                      <p className="text-center font-bold  text-green-600 text-2xl">
+                        {kuisioner.JumlahData}
+                      </p>
+                      <div className="flex justify-between">
+                        <span className="text-base py-2 px-2 text-yellow-600">
+                          {kuisioner.JumlahDesa}
+                        </span>
+                      </div>
+                      <Link href={`/desa-cantik/${kuisioner.Nama}`} className="bg-indigo-400 text-lg px-6 py-1 rounded-xl text-white"> Detail</Link>
+                     
+                    </div>
+                  </SwiperSlide>
+                );
+              }
+            )}
           </Swiper>
         </div>
       </div>
 
       <div>
-        <h1 className="text-white font-bold text-xl">Data Survey</h1>
+        <h1 className="text-white font-bold text-xl">{dataDesaCantik.dataDesaCantik.Data.Survey.Judul}</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="mt-4">
           <Swiper
-            modules={[Autoplay]} 
+            modules={[Autoplay]}
             spaceBetween={10}
             slidesPerView={1}
             pagination={{ clickable: true }}
             navigation
             loop
             autoplay={{
-              delay: 3000, 
-              disableOnInteraction: false, 
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             breakpoints={{
               640: {
@@ -113,7 +161,7 @@ export const ContentDesaCantik = () => {
               },
             }}
           >
-            {data.Data.ChartSurveys.map((survey, index) => {
+            {dataDesaCantik.dataDesaCantik.Data.Survey.Items.map((survey, index) => {
               const backgroundColors = [
                 "bg-blue-100",
                 "bg-green-100",
@@ -127,17 +175,26 @@ export const ContentDesaCantik = () => {
 
               return (
                 <SwiperSlide
-                  key={index}
-                  className={`${backgroundColor}  text-black rounded-xl`}
-                >
-                  <div className="flex flex-col justify-center items-center gap-4 p-4">
-                  <p className="text-lg font-semibold">{survey.NamaPendek}</p>
-                  <p className="text-md">{survey.Count}</p>
-                    <button className="bg-indigo-400 text-lg px-6 py-1 rounded-xl text-white">
-                      Detail
-                    </button>
-                  </div>
-                </SwiperSlide>
+                    key={index}
+                    className={`${backgroundColor} h-[200px] text-black rounded-xl `}
+                  >
+                    <div className="flex flex-col gap-4 p-4 ">
+                      <p className="text-lg font-semibold text-center">
+                        {survey.Nama} <span> {survey.Tahun}</span>
+                      </p>
+                      <p className="text-center font-bold  text-green-600 text-2xl">
+                        {survey.JumlahData}
+                      </p>
+                      <div className="flex justify-between">
+                        <span className="text-base py-2 px-2 text-yellow-600">
+                          {survey.JumlahDesa}
+                        </span>
+                      </div>
+                      <button className="bg-indigo-400 text-lg px-6 py-1 rounded-xl text-white">
+                        Detail
+                      </button>
+                    </div>
+                  </SwiperSlide>
               );
             })}
           </Swiper>
@@ -147,123 +204,3 @@ export const ContentDesaCantik = () => {
   );
 };
 
-const data = {
-  Data: {
-    ChartSurveys: [
-      {
-        Nama: "Survey Bantuan Sosial Tahun 2026",
-        NamaPendek: "Survey Bantuan Sosial 2026",
-        LabelTotal: "Total Data",
-        Count: "0",
-        Priority: true,
-      },
-      {
-        Nama: "Survey Bantuan Sosial 2025",
-        NamaPendek: "Survey BANSOS 2025",
-        LabelTotal: "Total Data",
-        Count: "0",
-        Priority: true,
-      },
-      {
-        Nama: "Survey BTS (Base Transceiver Station) 2024",
-        NamaPendek: "Survey BTS 2024",
-        LabelTotal: "Total Data",
-        Count: "5",
-        Priority: true,
-      },
-      {
-        Nama: "Survey Bantuan Sosial 2024",
-        NamaPendek: "Survey BANSOS 2024",
-        LabelTotal: "Total Data",
-        Count: "34",
-        Priority: true,
-      },
-      {
-        Nama: "Survey BTS (Base Transceiver Station) 2023",
-        NamaPendek: "Survey BTS 2023",
-        LabelTotal: "Total Data",
-        Count: "0",
-        Priority: true,
-      },
-      {
-        Nama: "Survey Bantuan Sosial 2020",
-        NamaPendek: "Survey BANSOS 2020",
-        LabelTotal: "Total Data",
-        Count: "0",
-        Priority: true,
-      },
-      {
-        Nama: "Survey BTS (Base Transceiver Station) 2019",
-        NamaPendek: "Survey BTS 2019",
-        LabelTotal: "Total Data",
-        Count: "282",
-        Priority: true,
-      },
-      {
-        Nama: "Survey Bantuan Sosial 2019",
-        NamaPendek: "Survey BANSOS 2019",
-        LabelTotal: "Total Data",
-        Count: "0",
-        Priority: true,
-      },
-    ],
-    ChartKuisioners: [
-      {
-        Nama: "Potensi Desa Tahun 2024",
-        NamaPendek: "Potensi Desa 2024",
-        LabelTotal: "Total Data",
-        Count: "129",
-        Priority: true,
-      },
-      {
-        Nama: "Harga Pasar Tahun 2024",
-        NamaPendek: "Harga Pasar 2024",
-        LabelTotal: "Total Data",
-        Count: "696",
-        Priority: true,
-      },
-      {
-        Nama: "Keluarga Tahun 2024",
-        NamaPendek: "Keluarga 2024",
-        LabelTotal: "Total Data",
-        Count: "9.395",
-        Priority: true,
-      },
-      {
-        Nama: "Stunting Tahun 2024",
-        NamaPendek: "Stunting 2024",
-        LabelTotal: "Total Data",
-        Count: "22",
-        Priority: true,
-      },
-      {
-        Nama: "Keluarga Tahun 2023",
-        NamaPendek: "Keluarga 2023",
-        LabelTotal: "Total Data",
-        Count: "65.412",
-        Priority: true,
-      },
-      {
-        Nama: "Harga Pasar Tahun 2023",
-        NamaPendek: "Harga Pasar 2023",
-        LabelTotal: "Total Data",
-        Count: "2.210",
-        Priority: true,
-      },
-      {
-        Nama: "Potensi Desa Tahun 2023",
-        NamaPendek: "Potensi Desa 2023",
-        LabelTotal: "Total Data",
-        Count: "216",
-        Priority: true,
-      },
-      {
-        Nama: "Stunting Tahun 2023",
-        NamaPendek: "Stunting 2023",
-        LabelTotal: "Total Data",
-        Count: "1",
-        Priority: true,
-      },
-    ],
-  },
-};

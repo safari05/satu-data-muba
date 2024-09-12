@@ -1,10 +1,11 @@
 
 import { Breadcrumbs, ContentDesaCantik } from "@/components/organisms";
 
-const DesaCantikScreen = () => {
+const DesaCantikScreen = ({initialData}) => {
+    
     return (
         <>
-            <ContentDesaCantik/>
+            <ContentDesaCantik dataDesaCantik={initialData}/>
         </>
     )
 };

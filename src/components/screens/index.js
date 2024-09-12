@@ -20,6 +20,7 @@ import DetailDatasetFormatScreen from "./detailDatasetFormat";
 import DetailDatasetPrivateScreen from "./detailDatasetPrivate";
 import DetailDatasetPreviewPrivateScreen from "./detailDatasetPreviewPrivate";
 import DesaCantikScreen from "./desaCantik";
+import DetailDesaCantikScreen from "./detailDesaCantik";
 
 export {
   HomeScreen,
@@ -44,4 +45,5 @@ export {
   DetailDatasetPrivateScreen,
   DetailDatasetPreviewPrivateScreen,
   DesaCantikScreen,
+  DetailDesaCantikScreen
 };
