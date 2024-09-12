@@ -1,4 +1,5 @@
 import { instanceAxios, instanceFetch } from "@/helpers/instance";
+import { instanceFetchDesaCantik } from "@/helpers/instance/instance";
 
 class DatasetService {
   async getHome() {
@@ -162,6 +163,12 @@ class DatasetService {
     );
     return await res.json();
   }
+
+  async getOneData() {
+    const res = await instanceFetchDesaCantik(`/One/GetData`);
+    return await res.json();
+  }
+
 }
 
 export default new DatasetService();
