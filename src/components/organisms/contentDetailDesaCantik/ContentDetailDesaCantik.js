@@ -3,6 +3,9 @@ import { Container, Select } from "@/components/atoms";
 import RSelect from "react-select";
 import { Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
+import ContentChart from "./ContentChart";
+import { useEffect, useState } from "react";
+import datasetService from "@/services/dataset.service";
 
 const customStyles = {
   container: (provided) => ({
@@ -15,47 +18,39 @@ const customStyles = {
   }),
 };
 
-const VulnChart = () => {
-  return (
-    <div>
-      <Bar
-        data={{
-          labels: [
-            "Sqli",
-            "XSS",
-            "XXE",
-            "Open Redirect",
-            "Broken Authentication"
-          ],
-          datasets: [
-            {
-              label: "# of vulnerabilities",
-              data: [15, 12, 6, 7, 4],
-              backgroundColor: ["red", "yellow", "blue", "black", "green"]
-            },
-          ]
-        }}
-        height={300}
-        width={500}
-        options={{
-          maintainAspectRatio: false
-        }}
-      />
-    </div>
-  );
-};
+export const ContentDetailDesaCantik = ({data, isKuisioner}) => {
+  console.log(isKuisioner)
+  const[chartPeriode, setChartPeriode] = useState(data.Data.ChartPeriode);
+  const[chartWilayah, setChartWilayah] = useState(data.Data.ChartWilayah);
+  const[selectedTahun, setSelectedTahun] = useState(null)
 
-export const ContentDetailDesaCantik = ({ data }) => {
- 
-  const Datas = data.Data;
-  const optionYears = Datas.Years.map((item, index) => ({
-    value: item.Id,
-    label: item.Label,
+  const datas = data.Data;
+  const optionYears = datas.Tahuns.map((item) => ({
+    value: item,
+    label: item,
   }));
 
   const selectedYearOption = optionYears.find(
-    (option) => option.value === Datas.Year
+    (option) => option.value === datas.Tahun
   );
+
+  // useEffect(() => {
+  //   // Set the initial selected year option when data changes
+  //   setSelectedTahun(selectedYearOption);
+  // }, [datas.Tahun, optionYears]);
+
+  const handleChangeTahun = async(selectedOption ) =>{
+    const tahun = selectedOption  ? selectedOption .value : null;
+    setSelectedTahun(selectedOption);
+
+    if(tahun){
+      const fetchOneSubData = await datasetService.getOneSubData(isKuisioner, datas.Kode, tahun);
+      setChartPeriode(fetchOneSubData.Data.ChartPeriode);
+      setChartWilayah(fetchOneSubData.Data.ChartWilayah);
+    }
+  }
+
+
   return (
     <Container>
       <div
@@ -74,21 +69,21 @@ export const ContentDetailDesaCantik = ({ data }) => {
 
         <h3 className="mt-2 text-center text-black font-bold">
           {" "}
-          {Datas.Title}
+          {datas.Judul} 
         </h3>
       </div>
 
       <div className="flex mb-20">
         <label className="text-white uppercase text-xl "> Tahun </label>
-        <RSelect value={selectedYearOption} options={optionYears}  styles={customStyles} className="ml-5"   />
+        <RSelect value={selectedTahun || selectedYearOption} options={optionYears}  styles={customStyles} className="ml-5" onChange={handleChangeTahun}  />
       </div>
 
       <div className="flex flex-wrap mx-4 lg:mx-6">
-      <div className="w-full lg:w-1/2 px-2 lg:px-4 mb-4 lg:mb-0">
-        <VulnChart />
+      <div className="w-full lg:w-1/2 px-2 lg:px-4 mb-4 lg:mb-0"> 
+        <ContentChart data={chartPeriode} />
       </div>
       <div className="w-full lg:w-1/2 px-2 lg:px-4 mb-4 lg:mb-0">
-        <VulnChart />
+      <ContentChart data={chartWilayah} />
       </div>
     </div>
     </Container>

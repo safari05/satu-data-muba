@@ -169,6 +169,26 @@ class DatasetService {
     return await res.json();
   }
 
+  async getOneSubData(isKuisioner,kode, tahun = null){
+
+
+    // let url = `/One/GetDataSub?isKuisioner=${isKuisioner}&kode=${kode}`;
+    // if(tahun !== null ){
+    //   url = `/One/GetDataSub?isKuisioner=${isKuisioner}&kode=${kode}&tahun=${tahun}`;
+    // }
+    const params = new URLSearchParams();
+    params.append('isKuisioner', isKuisioner);
+    params.append('kode', kode);
+
+    if (tahun) { // Checks for truthy value (non-null, non-undefined, non-empty)
+      params.append('tahun', tahun);
+    }
+
+    let apiServiceName = `/One/GetDataSub?${params.toString()}`;
+    const res = await instanceFetchDesaCantik(apiServiceName);
+    return await res.json();
+
+  }
 }
 
 export default new DatasetService();
