@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 
-const ContentChart = ({ data, title }) => {
+const ContentBarChart = ({ data, title }) => {
+  
   const chartKey = JSON.stringify(data);  // Unique key for the chart
 
   useEffect(() => {
@@ -15,7 +16,7 @@ const ContentChart = ({ data, title }) => {
   return (
     <div>
       <Bar
-        key={chartKey}  // Force re-render with a unique key
+        key={chartKey}  
         data={{
           labels: data.Labels,
           datasets: [
@@ -36,5 +37,5 @@ const ContentChart = ({ data, title }) => {
   );
 };
 
-export default ContentChart;
+export default ContentBarChart;
 

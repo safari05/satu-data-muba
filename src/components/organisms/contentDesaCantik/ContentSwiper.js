@@ -9,6 +9,8 @@ import SwiperCore, {
   Autoplay,
 } from "swiper";
 import Link from "next/link";
+import { ImageBase64 } from "@/components/atoms";
+import { MdArrowRight, MdDataThresholding } from "react-icons/md";
 
 // Install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -36,7 +38,6 @@ const CustomPagination = ({ swiper }) => {
 };
 
 function ContentSwiper({ data, isKuisioner }) {
-  console.log(isKuisioner);
   return (
     <Swiper
       modules={[Autoplay, Pagination, Navigation]}
@@ -65,46 +66,66 @@ function ContentSwiper({ data, isKuisioner }) {
         swiper.params.customPagination = <CustomPagination swiper={swiper} />;
       }}
     >
-      {data.map((kuisioner, index) => {
-        const backgroundColors = [
-          "bg-blue-100",
-          "bg-green-100",
-          "bg-yellow-100",
-          "bg-red-100",
-          "bg-purple-100",
-        ];
+      <div className="grid md:grid-cols-3 gap-10 grid-cols-1">
+        {data.map((item, index) => {
+          const backgroundColors = [
+            "bg-blue-100",
+            "bg-green-100",
+            "bg-yellow-100",
+            "bg-red-100",
+            "bg-purple-100",
+          ];
 
-        const backgroundColor =
-          backgroundColors[index % backgroundColors.length];
+          const backgroundColor =
+            backgroundColors[index % backgroundColors.length];
 
-        return (
-          <SwiperSlide
-            key={index}
-            className={`${backgroundColor} h-[200px] text-black rounded-xl `}
-          >
-            <div className="flex flex-col gap-4 p-4 ">
-              <p className="text-lg font-semibold text-center">
-                {kuisioner.Nama} <span> {kuisioner.Tahun}</span>
-              </p>
-              <p className="text-center font-bold  text-green-600 text-2xl">
-                {kuisioner.JumlahData}
-              </p>
-              <div className="flex justify-between">
-                <span className="text-base py-2 px-2 text-yellow-600">
-                  {kuisioner.JumlahDesa}
-                </span>
-              </div>
-              <Link
-                href={`/desa-cantik/${kuisioner.Kode}/${isKuisioner}`}
-                className="bg-indigo-400 text-lg px-6 py-1 rounded-xl text-white"
+          return (
+            <SwiperSlide
+              key={index}
+              className={` text-black rounded-xl `}
+            >
+              <div
+                className={`${backgroundColor} group bg-[#138489] rounded-xl p-2 min-h-[300px]`}
               >
-                {" "}
-                Detail
-              </Link>
-            </div>
-          </SwiperSlide>
-        );
-      })}
+                <div className="flex flex-row items-center space-x-4">
+                  <div className="flex-shrink-0">
+                    <ImageBase64
+                      base64String={item.Icon}
+                      altInfo="icon image"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-[#138489] font-bold font-mono text-xl">
+                      {item.Nama} {item.Tahun}
+                    </h3>
+                  </div>
+                </div>
+                 <div>
+                  <h2 className="text-[#138489] text-center font-bold font-mono text-xl"> Total Data <span className="text-[#EF8640]">{item.JumlahData}</span></h2> 
+                   <h2 className="text-[#138489] text-center font-bold font-mono text-xl"> {item.JumlahDesa}</h2>
+                 </div>
+                 <div className="flex items-start mt-7 ml-2">
+                  <Link
+                     href={`/desa-cantik/${item.Kode}/${isKuisioner}`}
+                    className="flex items-center border border-[#c54d4d] rounded-full px-4 py-2  text-center text-sm hover:bg-[#c54d4d] hover:text-white
+                     duration-500 cursor-pointer"
+                  >
+                    Selengkapnya
+                    <MdArrowRight size={15} color="#c54d4d" />
+                  </Link>
+                </div> 
+                <div className="flex">
+                {/* <div className="flex gap-2 justify-end  w-full">
+                  <MdDataThresholding size={15} color="#EF8640" className="mb-6" />
+                  <p className="text-[#EF8640] font-semibold text-md">{item.JumlahDesa}</p>
+                </div> */}
+              </div>
+                </div>
+               
+            </SwiperSlide>
+          );
+        })}
+      </div>
     </Swiper>
   );
 }
