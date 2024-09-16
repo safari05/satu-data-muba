@@ -1,7 +1,7 @@
 "use client";
 import { Container, Select } from "@/components/atoms";
 import RSelect from "react-select";
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Bar, Doughnut, Line } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 import datasetService from "@/services/dataset.service";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -111,7 +111,7 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           spaceBetween={10}
-          slidesPerView={4}
+          slidesPerView={1}
           pagination={{ clickable: true }}
           navigation
           loop
@@ -124,10 +124,10 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
               slidesPerView: 1, // 1 slide per view on small screens
             },
             768: {
-              slidesPerView: 2, // 2 slides per view on medium screens
+              slidesPerView: 1, // 2 slides per view on medium screens
             },
             1024: {
-              slidesPerView: 4, // 4 slides per view on large screens
+              slidesPerView: 1, // 4 slides per view on large screens
             },
           }}
         >
@@ -135,7 +135,7 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
             validData.map((item, index) => (
               <SwiperSlide
                 key={index}
-                className="flex flex-col bg-slate-300 py-6 px-6 text-green-600 rounded-md h-full" // Ensure slides take full height
+                className="flex flex-col bg-slate-300 py-6 px-6 text-green-600 rounded-md h-full " // Ensure slides take full height
               >
                 <h3 className="mb-4 text-green-800 text-center">
                   {item.Title}
@@ -188,6 +188,18 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
                         },
                       }}
                     />
+                  ) :  item.ChartType === "line" ? (
+                    <Line data={{
+                       labels: item.Labels,
+                       datasets: [
+                        {
+                          label: item.Title || "Chart Title",
+                          data: item.Data,
+                          backgroundColor:
+                            item.BackgroundColor || "rgba(75,192,192,0.4)",
+                        },
+                      ]
+                    }}/>
                   ) : (
                     <div className="bg-slate-400 w-10 h-10 text-green-800">
                       No Chart

@@ -34,7 +34,6 @@ export const ContentDesaCantik = (dataDesaCantik) => {
         <h1 className="text-yellow-400 font-bold text-xl">
           {dataDesaCantik.dataDesaCantik.Data.Kuisioner.Judul}
         </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="mt-4">
           <ContentSwiper data={dataDesaCantik.dataDesaCantik.Data.Kuisioner.Items} isKuisioner={true}/>
         </div>
@@ -42,7 +41,6 @@ export const ContentDesaCantik = (dataDesaCantik) => {
 
       <div>
         <h1 className="text-white font-bold text-xl">{dataDesaCantik.dataDesaCantik.Data.Survey.Judul}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="mt-4">
           <ContentSwiper data={dataDesaCantik.dataDesaCantik.Data.Survey.Items} isKuisioner={false}/>
         </div>
