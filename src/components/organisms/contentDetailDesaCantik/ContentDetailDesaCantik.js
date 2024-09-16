@@ -135,7 +135,7 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
             validData.map((item, index) => (
               <SwiperSlide
                 key={index}
-                className="flex flex-col bg-slate-400 py-6 px-6 text-green-600 rounded-md h-full" // Ensure slides take full height
+                className="flex flex-col bg-slate-300 py-6 px-6 text-green-600 rounded-md h-full" // Ensure slides take full height
               >
                 <h3 className="mb-4 text-green-800 text-center">
                   {item.Title}

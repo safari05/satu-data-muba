@@ -27,6 +27,7 @@ export const instanceFetchDesaCantik = async (url, options) => {
   };
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BASEURL_SURVEY_API}${url}`, options);
+    console.log(`${process.env.NEXT_PUBLIC_BASEURL_SURVEY_API}${url}`);
     if (!response.ok) {
       const errorMessage = `Error: ${response.status} ${response.statusText}`;
       console.error(errorMessage);
