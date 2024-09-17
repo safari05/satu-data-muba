@@ -47,7 +47,7 @@ function ContentSwiper({ data, isKuisioner }) {
       navigation
       loop
       autoplay={{
-        delay: 3000,
+        delay: 10000,
         disableOnInteraction: false,
       }}
       breakpoints={{

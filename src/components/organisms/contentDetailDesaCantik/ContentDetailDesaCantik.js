@@ -25,7 +25,7 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
   const [judul, setJudul] = useState(data.Data.Judul);
   const [selectedTahun, setSelectedTahun] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [swiperWidth, setSwiperWidth] = useState('100%');
+  const [swiperWidth, setSwiperWidth] = useState("100%");
 
   const datas = data.Data;
   const optionYears = datas.Tahuns.map((item) => ({
@@ -61,11 +61,11 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
 
   useEffect(() => {
     // Check if any chart type is "pie" and adjust swiperWidth
-    const hasPieChart = dataChart.some(item => item.ChartType === "pie");
-    if(hasPieChart){
-      setSwiperWidth('50%')
-    }else{
-      setSwiperWidth('100%')
+    const hasPieChart = dataChart.some((item) => item.ChartType === "pie");
+    if (hasPieChart) {
+      setSwiperWidth("50%");
+    } else {
+      setSwiperWidth("100%");
     }
   }, [dataChart]);
 
@@ -119,7 +119,7 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
           navigation
           loop
           autoplay={{
-            delay: 5000,
+            delay: 10000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -133,108 +133,123 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
               slidesPerView: 1, // 1 slides per view on large screens
             },
           }}
-          style={{ width: '100%' }} 
+          style={{ width: "100%" }}
         >
           {validData.length > 0 ? (
-  validData.map((item, index) => {
-    const slideWidth = item.ChartType === "pie" ? '50%' : '100%';
+            validData.map((item, index) => {
+              const slideWidth = item.ChartType === "pie" ? "50%" : "100%";
 
-    return (
-      <SwiperSlide
-        key={index}
-        className="flex items-center justify-center text-green-600 rounded-md"
-        style={{ width: slideWidth }} // Apply dynamic width
-      >
-        <div className="flex flex-col items-center justify-center w-full">
-          <h3 className="mb-4 text-white text-center font-bold text-xl">
-            {item.Title} :
-          </h3>
-          {item.ChartType === "bar" ? (
-            <div className="bg-green-200  rounded-xl  flex items-center justify-center py-6 px-6" style={{ width: slideWidth}}>
-              <Bar
-                data={{
-                  labels: item.Labels,
-                  datasets: [
-                    {
-                      label: item.Title || "Chart Title",
-                      data: item.Data,
-                      backgroundColor: item.BackgroundColor || "rgba(75,192,192,0.4)",
-                    },
-                  ],
-                }}
-                height={300}
-                width={300}
-                options={{
-                  maintainAspectRatio: false,
-                  plugins: {
-                    legend: {
-                      position: "right",
-                    },
-                  },
-                }}
-              />
-            </div>
-          ) : item.ChartType === "pie" ? (
-            <div className="bg-green-200  rounded-xl flex items-center justify-center py-6 px-6" style={{ width: slideWidth }}>
-              <Doughnut
-                data={{
-                  labels: item.Labels,
-                  datasets: [
-                    {
-                      label: item.Title || "Chart Title",
-                      data: item.Data,
-                      backgroundColor: item.BackgroundColor || "rgba(75,192,192,0.4)",
-                    },
-                  ],
-                }}
-                height={300}
-                width={300}
-                options={{
-                  maintainAspectRatio: false,
-                  plugins: {
-                    legend: {
-                      position: "right",
-                    },
-                  },
-                }}
-              />
-            </div>
-          ) : item.ChartType === "line" ? (
-            <div className="bg-green-200  rounded-xl   flex items-center justify-center" style={{ width: slideWidth }}>
-              <Line
-                data={{
-                  labels: item.Labels,
-                  datasets: [
-                    {
-                      label: item.Title || "Chart Title",
-                      data: item.Data,
-                      backgroundColor: item.BackgroundColor || "rgba(75,192,192,0.4)",
-                    },
-                  ],
-                }}
-                height={300}
-                width={300}
-                options={{
-                  maintainAspectRatio: false,
-                }}
-              />
-            </div>
+              return (
+                <SwiperSlide
+                  key={index}
+                  className="flex items-center justify-center text-green-600 rounded-md"
+                  style={{ width: slideWidth }} // Apply dynamic width
+                >
+                  <div className="flex flex-col items-center justify-center w-full">
+                    <h3 className="mb-4 text-white text-center font-bold text-xl">
+                      {item.Title} :
+                    </h3>
+                    {item.ChartType === "bar" ? (
+                      <div
+                        className="bg-green-200  rounded-xl  flex items-center justify-center py-6 px-6"
+                        style={{ width: slideWidth }}
+                      >
+                        <Bar
+                          data={{
+                            labels: item.Labels,
+                            datasets: [
+                              {
+                                label: item.Title || "Chart Title",
+                                data: item.Data,
+                                backgroundColor:
+                                  item.BackgroundColor ||
+                                  "rgba(75,192,192,0.4)",
+                              },
+                            ],
+                          }}
+                          height={300}
+                          width={300}
+                          options={{
+                            maintainAspectRatio: false,
+                            plugins: {
+                              legend: {
+                                position: "right",
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                    ) : item.ChartType === "pie" ? (
+                      <div
+                        className="bg-green-200  rounded-xl flex items-center justify-center py-6 px-6"
+                        style={{ width: slideWidth }}
+                      >
+                        <Doughnut
+                          data={{
+                            labels: item.Labels,
+                            datasets: [
+                              {
+                                label: item.Title || "Chart Title",
+                                data: item.Data,
+                                backgroundColor:
+                                  item.BackgroundColor ||
+                                  "rgba(75,192,192,0.4)",
+                              },
+                            ],
+                          }}
+                          height={300}
+                          width={300}
+                          options={{
+                            maintainAspectRatio: false,
+                            plugins: {
+                              legend: {
+                                position: "right",
+                              },
+                            },
+                          }}
+                        />
+                      </div>
+                    ) : item.ChartType === "line" ? (
+                      <div
+                        className="bg-green-200  rounded-xl   flex items-center justify-center"
+                        style={{ width: slideWidth }}
+                      >
+                        <Line
+                          data={{
+                            labels: item.Labels,
+                            datasets: [
+                              {
+                                label: item.Title || "Chart Title",
+                                data: item.Data,
+                                backgroundColor:
+                                  item.BackgroundColor ||
+                                  "rgba(75,192,192,0.4)",
+                              },
+                            ],
+                          }}
+                          height={300}
+                          width={300}
+                          options={{
+                            maintainAspectRatio: false,
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <div className="bg-slate-400 w-10 h-10 text-green-800">
+                        No Chart
+                      </div>
+                    )}
+                  </div>
+                </SwiperSlide>
+              );
+            })
           ) : (
-            <div className="bg-slate-400 w-10 h-10 text-green-800">
-              No Chart
-            </div>
+            <SwiperSlide className="flex items-center justify-center h-full">
+              <div className="bg-slate-400 w-full h-10 text-green-800">
+                No Valid Data Available
+              </div>
+            </SwiperSlide>
           )}
-        </div>
-      </SwiperSlide>
-    );
-  })
-) : (
-  <SwiperSlide className="flex items-center justify-center h-full">
-    <div className="bg-slate-400 w-full h-10 text-green-800">
-      No Valid Data Available
-    </div>
-  </SwiperSlide>
-)}
         </Swiper>
       )}
     </Container>
