@@ -29,3 +29,5 @@ export * from "./contentDetailNews";
 export * from "./contentDetailInfoGraphic";
 export * from "./contentDatasetTag";
 export * from "./contentDatasetFormat";
+export * from "./contentDesaCantik"
+export * from "./contentDetailDesaCantik"

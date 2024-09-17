@@ -1,4 +1,5 @@
 import { instanceAxios, instanceFetch } from "@/helpers/instance";
+import { instanceFetchDesaCantik } from "@/helpers/instance/instance";
 
 class DatasetService {
   async getHome() {
@@ -161,6 +162,32 @@ class DatasetService {
       `/Sdi/GetPublicationDocument?Search=&Rows=999999&PageNum=1&Sort=2`
     );
     return await res.json();
+  }
+
+  async getOneData() {
+    const res = await instanceFetchDesaCantik(`/One/GetData`);
+    return await res.json();
+  }
+
+  async getOneSubData(isKuisioner,kode, tahun = null){
+
+
+    // let url = `/One/GetDataSub?isKuisioner=${isKuisioner}&kode=${kode}`;
+    // if(tahun !== null ){
+    //   url = `/One/GetDataSub?isKuisioner=${isKuisioner}&kode=${kode}&tahun=${tahun}`;
+    // }
+    const params = new URLSearchParams();
+    params.append('isKuisioner', isKuisioner);
+    params.append('kode', kode);
+
+    if (tahun) { // Checks for truthy value (non-null, non-undefined, non-empty)
+      params.append('tahun', tahun);
+    }
+
+    let apiServiceName = `/One/GetDataSub?${params.toString()}`;
+    const res = await instanceFetchDesaCantik(apiServiceName);
+    return await res.json();
+
   }
 }
 

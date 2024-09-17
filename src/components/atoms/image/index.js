@@ -1,3 +1,3 @@
 import { ImageFallback } from "./ImageFallback";
-
-export { ImageFallback };
+import { ImageBase64 } from "./ImageBase64";
+export { ImageFallback, ImageBase64 };

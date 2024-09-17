@@ -33,7 +33,7 @@ export const Navbar = ({ type }) => {
       <NavItem link={"data"} name={"DATA"} color={color[type]} />
       <NavItem link={"organisasi"} name={"ORGANISASI"} color={color[type]} />
       <NavItem link={"kategori"} name={"KATEGORI"} color={color[type]} />
-      <NavItem link={"info-grafis"} name={"INFO GRAFIS"} color={color[type]} />
+      <NavItem link={"info-grafis"} name={"INFO GRAFIS"} color={color[type]} /> 
       <NavItem
         link={"kritik-saran"}
         name={"KRITIK & SARAN"}
@@ -42,7 +42,12 @@ export const Navbar = ({ type }) => {
       <NavItem link={"publikasi"} name={"PUBLIKASI"} color={color[type]} />
       <NavItem
         link={"statistik-sektoral"}
-        name={"STATISTIK SEKTORAL"}
+        name={"E WALIDATA SIPD"}
+        color={color[type]}
+      />
+      <NavItem
+        link={"desa-cantik"}
+        name={"DESA CANTIK"}
         color={color[type]}
       />
 

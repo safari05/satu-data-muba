@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS=--max-old-space-size=4096 next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,7 +18,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
-    "chart.js": "^4.4.0",
+    "chart.js": "^4.4.4",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "esri-leaflet": "^3.0.11",
@@ -26,7 +26,7 @@
     "jszip": "^3.10.1",
     "jszip-utils": "^0.1.0",
     "leaflet": "^1.9.4",
-    "next": "13.4.19", 
+    "next": "13.4.19",
     "nextjs-toploader": "^1.4.2",
     "photoswipe": "^5.3.7",
     "postcss": "8.4.23",
