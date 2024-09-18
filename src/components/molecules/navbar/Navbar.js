@@ -50,6 +50,12 @@ export const Navbar = ({ type }) => {
         name={"DESA CANTIK"}
         color={color[type]}
       />
+{/*       
+       <NavItem
+        link={"dashboard"}
+        name={"Dashboard"}
+        color={color[type]}
+      /> */}
 
       <div
         className="group cursor-pointer"

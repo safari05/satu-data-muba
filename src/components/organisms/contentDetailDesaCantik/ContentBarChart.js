@@ -1,41 +1,58 @@
-import { useEffect } from "react";
-import { Bar } from "react-chartjs-2";
+import React from "react";
+import dynamic from "next/dynamic";
 
-const ContentBarChart = ({ data, title }) => {
-  
-  const chartKey = JSON.stringify(data);  // Unique key for the chart
+const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+  ssr: false,
+});
 
-  useEffect(() => {
-    console.log("ContentChart data updated:", data);
-  }, [data]);
-
-  if (!data || !data.Labels || !data.Data) {
-    return <div>Loading...</div>;  // Handle cases where data might be undefined
+const ContentBarChart = ({
+  labels = [],
+  dataSeries = [],
+  background = [],
+}) => {
+  if (
+    !Array.isArray(labels) ||
+    !Array.isArray(dataSeries) ||
+    labels.length === 0 ||
+    dataSeries.length === 0
+  ) {
+    console.error("Invalid data provided:", { labels, dataSeries });
+    return null;
   }
 
+  const validBackground = Array.isArray(background) ? background : [];
+
+  const options = {
+    chart: {
+      type: "bar",
+      height: 350,
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 4,
+        horizontal: false,
+        distributed: true,
+      },
+    },
+    dataLabels: {
+      enabled: true,
+    },
+    xaxis: {
+      categories: labels,
+    },
+    colors: validBackground,
+  };
+
   return (
-    <div>
-      <Bar
-        key={chartKey}  
-        data={{
-          labels: data.Labels,
-          datasets: [
-            {
-              label: title || "Chart Title",
-              data: data.Data,
-              backgroundColor: data.BackgroundColor || 'rgba(75,192,192,0.4)',
-            },
-          ],
-        }}
-        height={300}
-        width={500}
-        options={{
-          maintainAspectRatio: false,
-        }}
+    <div className="w-full">
+      <ReactApexChart
+        series={[{ name: "Data", data: dataSeries }]}
+        options={options}
+        type="bar"
+        height={350}
       />
     </div>
   );
 };
 
 export default ContentBarChart;
-
