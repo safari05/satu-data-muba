@@ -8,6 +8,9 @@ import "swiper/swiper-bundle.min.css";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import classesSpiner from "./ContentDetailDesaCantik.module.css";
+import ContentPieChart from "./ContentPieChart";
+import ContentBarChart from "./ContentBarChart";
+import ContentLineChart from "./ContentLineChart";
 
 const customStyles = {
   container: (provided) => ({
@@ -91,10 +94,9 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
             Musi Banyuasin
           </span>
         </h3>
-
-        <h3 className="mt-2 text-center text-white font-bold"> {judul}</h3>
+        <h3 className="mt-2 text-center text-white font-bold text-xl mb-2"> {judul}</h3>
       </div>
-      <div className="flex mb-10">
+      {/* <div className="flex mb-10">
         <label className="text-white uppercase text-xl"> Tahun </label>
         <RSelect
           value={selectedTahun || selectedYearOption}
@@ -103,7 +105,7 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
           className="ml-5 z-30"
           onChange={handleChangeTahun}
         />
-      </div>
+      </div> */}
       {loading ? (
         <div className="flex items-center justify-center">
           <div className={classesSpiner.spinner}>
@@ -146,67 +148,29 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
                   style={{ width: slideWidth }} // Apply dynamic width
                 >
                   <div className="flex flex-col items-center justify-center w-full">
-                    <h3 className="mb-4 text-white text-center font-bold text-xl">
+                    <h3 className="mb-4 text-white text-center font-bold ">
                       {item.Title} :
                     </h3>
                     {item.ChartType === "bar" ? (
                       <div
-                        className="bg-green-200  rounded-xl  flex items-center justify-center py-6 px-6"
+                        className="bg-green-200 rounded-xl flex items-center justify-center py-6 px-6 h-1/2"
                         style={{ width: slideWidth }}
                       >
-                        <Bar
-                          data={{
-                            labels: item.Labels,
-                            datasets: [
-                              {
-                                label: item.Title || "Chart Title",
-                                data: item.Data,
-                                backgroundColor:
-                                  item.BackgroundColor ||
-                                  "rgba(75,192,192,0.4)",
-                              },
-                            ],
-                          }}
-                          height={300}
-                          width={300}
-                          options={{
-                            maintainAspectRatio: false,
-                            plugins: {
-                              legend: {
-                                position: "right",
-                              },
-                            },
-                          }}
+                        <ContentBarChart
+                          labels={item.Labels}
+                          dataSeries={item.Data}
+                          background={item.BackgroundColor}
                         />
                       </div>
                     ) : item.ChartType === "pie" ? (
                       <div
                         className="bg-green-200  rounded-xl flex items-center justify-center py-6 px-6"
-                        style={{ width: slideWidth }}
+                        style={{width: slideWidth}}
                       >
-                        <Doughnut
-                          data={{
-                            labels: item.Labels,
-                            datasets: [
-                              {
-                                label: item.Title || "Chart Title",
-                                data: item.Data,
-                                backgroundColor:
-                                  item.BackgroundColor ||
-                                  "rgba(75,192,192,0.4)",
-                              },
-                            ],
-                          }}
-                          height={300}
-                          width={300}
-                          options={{
-                            maintainAspectRatio: false,
-                            plugins: {
-                              legend: {
-                                position: "right",
-                              },
-                            },
-                          }}
+                        <ContentPieChart
+                          labels={item.Labels}
+                          dataSeries={item.Data}
+                          background={item.BackgroundColor}
                         />
                       </div>
                     ) : item.ChartType === "line" ? (
@@ -214,7 +178,13 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
                         className="bg-green-200  rounded-xl   flex items-center justify-center"
                         style={{ width: slideWidth }}
                       >
-                        <Line
+                        <ContentLineChart 
+                          title={item.Title || "Chart Line Title"}
+                          labels={item.Labels}
+                          dataSeries={item.Data}
+                          background={item.BackgroundColor}
+                        />
+                        {/* <Line
                           data={{
                             labels: item.Labels,
                             datasets: [
@@ -232,7 +202,7 @@ export const ContentDetailDesaCantik = ({ data, isKuisioner }) => {
                           options={{
                             maintainAspectRatio: false,
                           }}
-                        />
+                        /> */}
                       </div>
                     ) : (
                       <div className="bg-slate-400 w-10 h-10 text-green-800">

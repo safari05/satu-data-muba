@@ -29,7 +29,7 @@ export const CountData = ({
         width={8}
         height={16}
         alt={"ic-program-unggulan.svg"}
-        name={"Program Unggulan"}
+        name={"Data Prioritas"}
         count={countProgramUnggulan}
       />
     </>
