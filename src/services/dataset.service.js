@@ -177,7 +177,7 @@ class DatasetService {
     //   url = `/One/GetDataSub?isKuisioner=${isKuisioner}&kode=${kode}&tahun=${tahun}`;
     // }
     const params = new URLSearchParams();
-    params.append('isKuisioner', isKuisioner);
+    //params.append('isKuisioner', isKuisioner);
     params.append('kode', kode);
 
     if (tahun) { // Checks for truthy value (non-null, non-undefined, non-empty)
