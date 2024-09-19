@@ -50,7 +50,8 @@ const ContentStackBarChart = ({ labels = [], dataSeries = [], background = [] })
       }],
     plotOptions: {
       bar: {
-        columnWidth: '100%',
+        columnWidth: '70%',
+        distributed: false,
         responsive: [{
             breakpoint: 480,
             options: {
@@ -75,7 +76,16 @@ const ContentStackBarChart = ({ labels = [], dataSeries = [], background = [] })
       categories: labels,
       labels: {
         offsetX: -10
-      }
+      },
+      tickPlacement: 'between'
+    },
+    grid : {
+      padding: {
+          top: 0,
+          right: 10,
+          bottom: 0,
+          left: 10
+      },  
     },
     colors : colors
   };
