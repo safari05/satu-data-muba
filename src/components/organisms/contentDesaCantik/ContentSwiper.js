@@ -96,7 +96,7 @@ function ContentSwiper({ data, isKuisioner }) {
                   </div>
                   <div>
                     <h3 className="text-[#138489] font-bold font-mono text-xl">
-                      {item.Nama} {item.Tahun}
+                      {item.Nama}
                     </h3>
                   </div>
                 </div>
