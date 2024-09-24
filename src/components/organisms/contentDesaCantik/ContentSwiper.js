@@ -51,6 +51,12 @@ function ContentSwiper({ data, isKuisioner }) {
         disableOnInteraction: false,
       }}
       breakpoints={{
+        344: {
+          slidesPerView: 1, // 1 slide per view on small screens
+        },
+        466: {
+          slidesPerView: 1, // 1 slide per view on small screens
+        },
         640: {
           slidesPerView: 1, // 1 slide per view on small screens
         },
