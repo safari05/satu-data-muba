@@ -9,7 +9,7 @@ export default async function Page({params}) {
   // Example: Extract values from the array
   const [kode, isKuisioner] = slugArray;
 
-  const detailDesaCantikData = await datasetService.getOneSubData(isKuisioner, kode);
+  const detailDesaCantikData = await datasetService.getOneSubData(kode);
 
   return (
     <>
